@@ -11,21 +11,26 @@
   <body class="p-3 m-0 border-0 bd-example bd-example-cssgrid">
 
     <!-- Example Code -->
+    <div class="jumbotron bg-primary text-white shadow rounded">
+      <h1 class="display-2 text-center">Weather Forecast</h1>
+      <hr class="my-4">
+    </div>
+
     <div class="grid text-center" style="--bs-columns: 12; --bs-gap: 1rem;">
-    <div class="g-col-4 bg-white">
+    <div class="g-col-4 bg-white border-0">
          <div>
-        search for city
+        <h2>Search for City</h2>
         <div class="grid bg-white" style="--bs-columns: 1;">
-          <div class="g-col-12 bg-white">
+          <div class="g-col-12 bg-white border-0">
           <div class="mb-1">
-          <label for="exampleFormControlTextarea1" class="form-label">City</label>
+          <label for="exampleFormControlTextarea1" class="form-label"><h4>City</h4></label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
           </div>
           <div class="d-grid gap-2 bg-white">
           <button class="btn btn-primary" type="button">Search</button>
         </div>
           </div>
-          <div class="g-col-12 text-center bg-white">
+          <div class="g-col-12 text-center bg-white border-0">
           <div class="d-grid gap-1">
           <button class="btn btn-secondary" type="button">City History</button>
           <button class="btn btn-secondary" type="button">City History</button>
@@ -39,66 +44,72 @@
     
     </div>
     
-    <div class="g-col-8 bg-white">
+    <div class="g-col-8 bg-white border-0 shadow p-3 mb-5 bg-white rounded">
     <div>
-    Weather Forecast
+    <h3>Current Forecast</h3>
     <div class="grid" style="--bs-columns: 12">
-      <div class="g-col-12 bg-white">shows current day temp</div>
-      <div class="g-col-12 bg-white">5-Day Forecast
+      <div class="g-col-12 bg-white border border-dark">
+        <h2 id="currentCity"></h2>
+        <h4 id="currentTemp"></h4>
+        <h4 id="currentWind"></h4>
+        <h4 id="currentHumidity"></h4>
+        <br>
+      </div>
+      <div class="g-col-12 bg-white border-0"><h4>5-Day Forecast</h4>
         <div class="grid" style="--bs-columns: 10;">
-        <div class="card g-col-2 card text-bg-dark mb-3" style="width: 10rem">
-        <div class="card-body">
+        <div class="card g-col-2 card text-bg-dark mb-5 shadow" style="width: 18rem">
+        <div class=>
           <h5 class="card-title">Date</h5>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Weather Icon</li>
-          <li class="list-group-item">Temp</li>
-          <li class="list-group-item">Wind</li>
-          <li class="list-group-item">Humidity</li>
+        <ul class="list-group list-group-flush bg-dark">
+          <li class="list-group-item bg-dark text-white d-flex">Weather Icon</li>
+          <li class="list-group-item bg-dark text-white d-flex">Temp</li>
+          <li class="list-group-item bg-dark text-white d-flex">Wind</li>
+          <li class="list-group-item bg-dark text-white d-flex">Humidity</li>
         </ul>
       </div>
-      <div class="card g-col-2 card text-bg-dark mb-3" style="width: 10rem">
-      <div class="card-body">
-        <h5 class="card-title">Date</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Weather Icon</li>
-        <li class="list-group-item">Temp</li>
-        <li class="list-group-item">Wind</li>
-        <li class="list-group-item">Humidity</li>
+      <div class="card g-col-2 card text-bg-dark mb-5 shadow" style="width: 18rem">
+        <div class=>
+          <h5 class="card-title">Date</h5>
+        </div>
+        <ul class="list-group list-group-flush bg-dark">
+          <li class="list-group-item bg-dark text-white d-flex">Weather Icon</li>
+          <li class="list-group-item bg-dark text-white d-flex">Temp</li>
+          <li class="list-group-item bg-dark text-white d-flex">Wind</li>
+          <li class="list-group-item bg-dark text-white d-flex">Humidity</li>
       </ul>
     </div>
-    <div class="card g-col-2 card text-bg-dark mb-3" style="width: 10rem">
-    <div class="card-body">
-      <h5 class="card-title">Date</h5>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Weather Icon</li>
-      <li class="list-group-item">Temp</li>
-      <li class="list-group-item">Wind</li>
-      <li class="list-group-item">Humidity</li>
+    <div class="card g-col-2 card text-bg-dark mb-5" style="width: 18rem">
+        <div class=>
+          <h5 class="card-title">Date</h5>
+        </div>
+        <ul class="list-group list-group-flush bg-dark shadow">
+          <li class="list-group-item bg-dark text-white d-flex">Weather Icon</li>
+          <li class="list-group-item bg-dark text-white d-flex">Temp</li>
+          <li class="list-group-item bg-dark text-white d-flex">Wind</li>
+          <li class="list-group-item bg-dark text-white d-flex">Humidity</li>
     </ul>
   </div>
-  <div class="card g-col-2 card text-bg-dark mb-3" style="width: 10rem">
-  <div class="card-body">
-    <h5 class="card-title">Date</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Weather Icon</li>
-    <li class="list-group-item">Temp</li>
-    <li class="list-group-item">Wind</li>
-    <li class="list-group-item">Humidity</li>
+  <div class="card g-col-2 card text-bg-dark mb-5" style="width: 18rem">
+    <div class=>
+      <h5 class="card-title">Date</h5>
+    </div>
+    <ul class="list-group list-group-flush bg-dark shadow">
+      <li class="list-group-item bg-dark text-white d-flex">Weather Icon</li>
+      <li class="list-group-item bg-dark text-white d-flex">Temp</li>
+      <li class="list-group-item bg-dark text-white d-flex">Wind</li>
+      <li class="list-group-item bg-dark text-white d-flex">Humidity</li>
   </ul>
 </div>
-<div class="card g-col-2 card text-bg-dark mb-3" style="width: 10rem">
-<div class="card-body">
-  <h5 class="card-title">Date</h5>
-</div>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Weather Icon</li>
-  <li class="list-group-item">Temp</li>
-  <li class="list-group-item">Wind</li>
-  <li class="list-group-item">Humidity</li>
+<div class="card g-col-2 card text-bg-dark mb-5" style="width: 18rem">
+    <div class=>
+      <h5 class="card-title">Date</h5>
+    </div>
+    <ul class="list-group list-group-flush bg-dark shadow">
+      <li class="list-group-item bg-dark text-white d-flex">Weather Icon</li>
+      <li class="list-group-item bg-dark text-white d-flex">Temp</li>
+      <li class="list-group-item bg-dark text-white d-flex">Wind</li>
+      <li class="list-group-item bg-dark text-white d-flex">Humidity</li>
 </ul>
 </div>
     </div>
