@@ -1,4 +1,4 @@
-var cityHistory = $("#city-history");
+var cityHistory = $("#cityHistory");
 var cities =[];
 
 function getInfo(){
@@ -7,10 +7,10 @@ function getInfo(){
     displayCity.innerHTML = cityName.value;
     
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}&units=imperial&appid=06986c508b07c672d03a8bf63ea59996`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}&units=imperial&appid=3bf63872572076ceaf9bd983d73eb7e7`)
     .then(response => response.json())
     .then(data => {
-        
+        $('#showCity').text(data.city.name);
         for(i=0; i<6; i++) {
             $('#allDays').find($("#day"+(i+1)+"Temp").text(`${data.list[i].main.temp} °F`));
             $('#allDays').find($("#day"+(i+1)+"Wind").text(`Wind Speed: ${data.list[i].wind.speed}`));
@@ -61,10 +61,12 @@ function renderCities() {
     for (var i = 0; i < cities.length; i++) {
       var city = cities[i];
       var cityList = $("<button>").text(city);
-      cityList.attr("id","listC");
-      cityList.attr("data-city", city);
+      cityList.attr("dataCity", city);
       cityList.attr("class", "d-grid gap-1");
-
+      $(".d-grid").on("click", (e) => {
+        $("#searchInput").val(e.target.textContent);
+        getInfo();
+      })
       cityHistory.prepend(cityList);
     }
     if (!city){
@@ -76,7 +78,7 @@ function renderCities() {
 
 }
 
-$("#add-city").on("click", function(event){
+$("#addCity").on("click", function(event){
     event.preventDefault();
   var city = $("#searchInput").val().trim();
   if (city === "") {
