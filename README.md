@@ -1,7 +1,7 @@
 # Weather-API
 
 ## Deployed Link
-
+https://peterm012.github.io/Weather-API/
 
 ## Site Picture
 ![Weather API](https://user-images.githubusercontent.com/110750833/194931693-12d6ee90-52ee-4db1-bf87-7f119861a0f8.gif)
