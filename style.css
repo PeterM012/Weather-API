@@ -1,0 +1,63 @@
+body {
+    background-image: url(What-is-landscape-photography.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.jumbotron {
+    margin-bottom: 2rem;
+    border: solid 2px rgb(207, 117, 255);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.g-col-4 {
+    backdrop-filter: blur(20px);
+    border: solid 4px rgb(255, 174, 117);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+
+.g-col-8 {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.g-col-12 {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+
+.grid {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+
+.title {
+    color: white;
+    text-shadow: black 10px;
+}
+
+.card-body {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    color:white;
+}
+
+.box {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+.currentCity {
+    font-size: 48px;
+}
