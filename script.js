@@ -1,16 +1,18 @@
+// Variables used for saving cities in local storage
 var cityHistory = $("#cityHistory");
 var cities =[];
-
+// Uses the ID from HTML and the Cities entered and converts them into a new variable to use for my URL
 function getInfo(){
     var cityName = document.getElementById("searchInput");
     var displayCity = document.getElementById("showCity");
     displayCity.innerHTML = cityName.value;
     
-
+// Fetching the api key for Open Weather and creating the response for the page 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}&units=imperial&appid=3bf63872572076ceaf9bd983d73eb7e7`)
     .then(response => response.json())
     .then(data => {
         $('#showCity').text(`${data.city.name}`);
+        // For Loop cycling through the ID and inputting the data retrieved from the API into the current and forecast elements
         for(i=0; i<6; i++) {
             $('#allDays').find($("#day"+(i+1)+"Temp").text(`${data.list[i].main.temp} °F`));
             $('#allDays').find($("#day"+(i+1)+"Wind").text(`Wind Speed: ${data.list[i].wind.speed}`));
@@ -18,6 +20,7 @@ function getInfo(){
             $('#allDays').find($("#img"+(i+1)).attr("src", "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"));
           }
         
+        // Used Moment.JS to show the current date and next 5 dates for forecast
         var currentDate = moment().calendar();        
         $('#allDays').find($("#day1Date").text(currentDate));
 
@@ -40,7 +43,7 @@ function getInfo(){
 
 
 }
-
+//Start Function for Local Storage to get the Cities entered in local storage
 init();
 function init(){
     var storedCities = JSON.parse(localStorage.getItem("cities"));
@@ -49,13 +52,13 @@ function init(){
       }
     renderCities();
 }
-
+// Saves the Entries of cities in the Local Storage 
 function storeCities(){
    localStorage.setItem("cities", JSON.stringify(cities));
    console.log(localStorage);
  }
 
-
+// Creates buttons depending on what city was entered in the input element and saves them on the screen after page is refreshed
 function renderCities() {
     cityHistory.empty();
     for (var i = 0; i < cities.length; i++) {
@@ -78,6 +81,7 @@ function renderCities() {
 
 }
 
+// Allows the button to be clicked for previous cities search and calls on the local storage
 $("#addCity").on("click", function(event){
     event.preventDefault();
   var city = $("#searchInput").val().trim();

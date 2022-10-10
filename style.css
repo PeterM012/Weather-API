@@ -1,3 +1,4 @@
+/* This displays the background image of the Webpage */
 body {
     background-image: url(What-is-landscape-photography.jpg);
     background-size: cover;
@@ -5,7 +6,7 @@ body {
     background-attachment: fixed;
 
 }
-
+/* This displays the Header on the Webpage */
 .jumbotron {
     margin-bottom: 2rem;
     border: solid 2px rgb(207, 117, 255);
@@ -14,7 +15,7 @@ body {
     box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
     color: white;
 }
-
+/* This gives the grids a glossy frost appearance */
 .g-col-4 {
     backdrop-filter: blur(20px);
     border: solid 4px rgb(255, 174, 117);
@@ -64,6 +65,8 @@ background-color:transparent;
     border-radius: 10px;
     box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
 }
+
+/* Changes the font size of the City entered in the Current City */
 .currentCity {
     font-size: 48px;
 }
