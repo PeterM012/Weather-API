@@ -10,11 +10,11 @@
   <title>Weather Application</title>
 <body class="p-3 m-0 border-0 bd-example bd-example-cssgrid">
 
-  <!-- Example Code -->
+  <!-- This displays the header of the Webpage -->
   <div class="jumbotron">
     <h1 class="display-2 text-center">Weather Forecast</h1>
   </div>
-
+<!-- The start of the grid -->
   <div class="grid text-center" style="--bs-columns: 12; --bs-gap: 1rem;">
     <div class="g-col-4">
       <div>
@@ -22,14 +22,17 @@
         <div class="grid" style="--bs-columns: 1;">
           <div class="g-col-12">
             <div class="mb-1">
+              <!-- Search input for the cities -->
               <input class="form-control bg-dark text-white " list="datalistOptions" id="searchInput" placeholder="Type to search...">
             </div>
             <div class="d-grid gap-2">
+              <!-- Button for Search Button -->
               <button class="btn btn-primary button border-0 bg-dark text-white" type="button" id="addCity" onclick="getInfo()">Search</button>
 
             </div>
           </div>
           <div class="g-col-12">
+            <!-- Div that uses local storage to create buttons for city history -->
             <div class="d-grid gap-1" id="cityHistory">
             </div>
           </div>
@@ -37,6 +40,7 @@
       </div>
     </div>
 
+    <!-- Grid that displays the current day and forecast -->
     <div class="g-col-8">
       <div>
         <h3>Current Forecast</h3>
@@ -54,10 +58,12 @@
             </div>
           </div>
           <div class="g-col-12">
+            <!-- Boxes for the 5 day forecast -->
             <h4>5-Day Forecast</h4>
             <div class="grid d-flex flex-wrap" style="--bs-columns: 10;">
               <div class="card g-col-2 card text-bg-dark mb-5 shadow" style="width: 18rem">
                 <div class=>
+                  <!-- Box 1 -->
                   <h5 class="card-title" id="day2Date"></h5>
                 </div>
                 <ul class="list-group list-group-flush bg-dark">
@@ -69,6 +75,7 @@
               </div>
               <div class="card g-col-2 card text-bg-dark mb-5 shadow" style="width: 18rem">
                 <div class=>
+                  <!-- Box 2 -->
                   <h5 class="card-title" id="day3Date"></h5>
                 </div>
                 <ul class="list-group list-group-flush bg-dark">
@@ -78,6 +85,7 @@
                   <li class="list-group-item bg-dark text-white d-flex" id="day3Humidity"></li>
                 </ul>
               </div>
+                 <!-- Box 3 -->
               <div class="card g-col-2 card text-bg-dark mb-5" style="width: 18rem">
                 <div class=>
                   <h5 class="card-title" id="day4Date"></h5>
@@ -91,6 +99,7 @@
               </div>
               <div class="card g-col-2 card text-bg-dark mb-5" style="width: 18rem">
                 <div class=>
+                  <!-- Box 4 -->
                   <h5 class="card-title" id="day5Date"></h5>
                 </div>
                 <ul class="list-group list-group-flush bg-dark shadow">
@@ -102,6 +111,7 @@
               </div>
               <div class="card g-col-2 card text-bg-dark mb-5" style="width: 18rem">
                 <div class=>
+                  <!-- Box 5 -->
                   <h5 class="card-title" id="day6Date"></h5>
                 </div>
                 <ul class="list-group list-group-flush bg-dark shadow">
@@ -114,12 +124,12 @@
             </div>
           </div>
         </div>
-          <!-- End Example Code -->
+        
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="./script.js"></script>
+<script src="script.js"></script>
 
 
 </html>

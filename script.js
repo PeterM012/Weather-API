@@ -10,12 +10,12 @@ function getInfo(){
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName.value}&units=imperial&appid=3bf63872572076ceaf9bd983d73eb7e7`)
     .then(response => response.json())
     .then(data => {
-        $('#showCity').text(data.city.name);
+        $('#showCity').text(`${data.city.name}`);
         for(i=0; i<6; i++) {
             $('#allDays').find($("#day"+(i+1)+"Temp").text(`${data.list[i].main.temp} °F`));
             $('#allDays').find($("#day"+(i+1)+"Wind").text(`Wind Speed: ${data.list[i].wind.speed}`));
             $('#allDays').find($("#day"+(i+1)+"Humidity").text(`Humidity: ${data.list[i].main.humidity}%`));
-            $('#allDays').find($("#img"+(i+1)).attr("src", "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png"));
+            $('#allDays').find($("#img"+(i+1)).attr("src", "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"));
           }
         
         var currentDate = moment().calendar();        
